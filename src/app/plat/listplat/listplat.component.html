@@ -1,0 +1,91 @@
+
+<input type ="text" name="name" [(ngModel)]="name" class="form-control" (ngModelChange)="Search()" placeholder="Enter name plat to search (avancé) ">
+
+<input type ="text" name="categorie" [(ngModel)]="categorie" class="form-control" (ngModelChange)="SearchCategory()"placeholder="Enter category plat to search(toute une mot)">
+
+<input type ="text" name="resto" [(ngModel)]="resto" class="form-control" (ngModelChange)="SearchNameResto()"placeholder="Enter name resto to search(toute une mot)">
+
+<table class="table table-borderless">
+    <thead class="thead-light">
+      <th (click)="sort('id')" >Id&nbsp;<i class="fa fa-sort"></i></th>
+      <th (click)="sort('resto')" >resto&nbsp;<i class="fa fa-sort"></i></th>
+      <th>name</th>
+      <th>category</th>
+      <th (click)="sort('price')" >price&nbsp;<i class="fa fa-sort"></i></th>
+      <th>chef</th>
+      <th>rating</th>
+      <th>image</th>
+  
+      <th>
+       
+  
+        <a class="btn btn-sm btn-success text-white"[routerLink]="['/add/plat/']"><i class="fa fa-plus"></i> Add Item</a>
+      </th>
+    </thead>
+    <tbody>
+     
+    
+  
+      <tr *ngFor="let plats of plat | orderBy: key:reverse | paginate:{itemsPerPage:5,currentPage:p};" >
+        <td>{{plats.id}}</td>
+        <td>{{plats.resto}}</td>
+        <td>{{plats.name}}</td>
+        <td>{{plats.categorie}}</td>
+        <td>{{plats.price}}</td>
+        <td>{{plats.chef}}</td>
+        <td>{{plats.rating}}</td>
+        <td>{{plats.image}}</td>
+  
+        <td>
+          <a class="btn btn-sm btn-info text-white"  ><i   [routerLink]="['/edit/plat/',plats.id]" class="fa fa-pencil">edit</i></a>
+          <a class="btn btn-sm btn-danger text-white ml-1" ><i   [routerLink]="['/delete/plat/',plats.id]"class="fa fa-trash">delete</i></a>
+          <a  class="btn btn-sm btn text-white ml-1" [ngClass] ="'style1'"  ><i  (click)="addPrix(plats.price)" >add</i></a>
+          <a  class="btn btn-sm btn text-white ml-1" [ngClass] ="'style2'"  ><i  (click)="generatePdf(plats)" >Description Detaill En PDF</i></a>
+
+
+
+        </td>
+
+      </tr>
+  
+     
+    </tbody>
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+  </table>
+
+
+
+
+
+<!--
+
+<table class="table table-borderless">
+    <thead class="thead-light">
+      <th>Id</th>
+      <th>resto</th>
+      <th>name</th>
+      <th>categorie</th>
+      <th>price</th>
+      <th>chef</th>
+      <th>rating</th>
+      <th>image</th>
+  
+      <th>
+       
+  
+        <a class="btn btn-sm btn-success text-white"[routerLink]="['/add/plat/']"><i class="fa fa-plus"></i> Add Item</a>
+      </th>
+      
+    </thead>
+    <tbody>
+      
+    
+     <app-calculprix *ngFor="let plats of plat"  [plats]="plats" > </app-calculprix>
+     
+      
+   
+    </tbody>
+  </table>
+
+
+  -->

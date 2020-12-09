@@ -1,0 +1,51 @@
+<div>
+  <input type ="text" [(ngModel)]="nomResto" class="form-control"placeholder="Enter name resto to search">
+  <input type ="text" [(ngModel)]="lieu" class="form-control" placeholder="Enter location resto to search">
+ <!--<button (click)="Search()">search</button>  --> 
+
+  <a class="btn btn-sm btn-info text-white" [ngClass] ="'style2'" ><i    (click)="Search()" class="fa fa-pencil">search</i></a>
+
+</div>
+<table class="table table-borderless">
+    <thead class="thead-light">
+      <th>Id</th>
+      <th>employe Id</th>
+      <th>nom Resto</th>
+      <th>location</th>
+      <th>number of employees</th>
+      <th>promotion</th>
+      <th>rating</th>
+      <th>etat</th>
+      <th>image</th>
+  
+      <th>
+       
+  
+        <a class="btn btn-sm btn-success text-white"[routerLink]="['/add/resto/']"><i class="fa fa-plus"></i> Add Item</a>
+      </th>
+    </thead>
+    <tbody>
+      
+      <tr    [ngStyle]="{'background-color':restos.etat === 0 ? '#FA8072' : '#7EC6F3' }" *ngFor="let restos of resto" >
+        <td>{{restos.id}}</td>
+        <td>{{restos.employeId}}</td>
+        <td>{{restos.nomResto}}</td>
+        <td>{{restos.lieu}}</td>
+        <td>{{restos.nbreEmploye}}</td>
+        <td>{{restos.promotion}}</td>
+        <td>{{restos.rating}}</td>
+        <td *ngIf="restos.etat==1">ouvert</td>
+        <td *ngIf="restos.etat==0">fermer</td>
+
+        <td>{{restos.image}}</td>
+  
+        <td>
+          <a class="btn btn-sm btn-info text-white"  ><i   [routerLink]="['/edit/resto/',restos.id]" class="fa fa-pencil">edit</i></a>
+          <a *ngIf="restos.etat==1"  [ngClass] ="'style1'"   class="btn btn-sm btn-danger text-white ml-1" ><i   [routerLink]="['/delete/resto/',restos.id]"  class="fa fa-trash">delete</i></a>
+
+          <a *ngIf="restos.etat!=1"class="btn btn-sm btn-danger text-white ml-1" ><i  class="fa fa-trash">delete</i></a>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>

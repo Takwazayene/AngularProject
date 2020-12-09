@@ -1,0 +1,49 @@
+{
+    "users":[
+        {
+            "id":1,
+            "first_name":"takwa",
+            "last_name":"zayene",
+            "email":"takwa.zayene@esprit.tn"
+        },
+        {
+            "id":2,
+            "first_name":"ahmed",
+            "last_name":"zayene",
+            "email":"takwa.zayene@esprit.tn"
+        },
+        {
+            "id":3,
+            "first_name":"meryem",
+            "last_name":"zayene",
+            "email":"takwa.zayene@esprit.tn"
+        },
+        {
+            "id":2,
+            "first_name":"samah",
+            "last_name":"zayene",
+            "email":"takwa.zayene@esprit.tn"
+        }
+    ] ,
+
+
+
+        "employee": [
+          {
+            "employeeId": 2,
+            "name": "samouha",
+            "email": "zayene",
+            "mobile": "takwa.zayene@esprit.tn",
+            "position": "takwa"
+          },
+          {
+            "employeeId": 3,
+            "name": "samouha",
+            "email": "zayene",
+            "mobile": "takwa.zayene@esprit.tn",
+            "position": "takwa"
+          }
+        ]
+      }
+
+

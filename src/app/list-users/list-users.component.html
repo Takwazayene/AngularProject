@@ -1,0 +1,79 @@
+<p>
+  list-users works!
+</p>
+
+<!--
+<table border="3" class="table"  class="text-lg-center">
+  <tr>
+    <td>
+      ID:
+    </td>
+    <td>
+      First Name
+    </td>
+    <td>
+      Last Name
+    </td>
+    <td>
+      Email
+    </td>
+    <td >
+      Action
+    </td>
+  </tr>
+
+  <tr *ngFor="let user of users">
+    <td>
+      {{user.id}}
+    </td>
+    <td>
+      {{user.first_name}}
+    </td>
+
+    <td>
+      {{user.last_name}}
+    </td>
+    <td>
+      {{user.email}}
+    </td>
+
+    <a [routerLink]="['/update/user/',user.id]">update User</a>
+    <button [routerLink]="['/delete/user/',user.id]">delete User</button>
+    <input type="submit" [routerLink]="['/delete/user/',user.id]" class="btn-danger" value="delete User">
+    <a [routerLink]="['/add/user/']">add User</a>
+  </tr>
+</table>
+
+-->
+
+
+<table  class="table table-borderless" >
+  <thead class="thead-light">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Username</th>
+    <th>email</th>
+    <th>Password</th>
+
+    <th>
+     
+
+      <a class="btn btn-sm btn-success text-white"[routerLink]="['/add/user/']"><i class="fa fa-plus"></i> Add Item</a>
+    </th>
+  </thead>
+  <tbody>
+ 
+    <tr *ngFor="let user of users" >
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.password}}</td>
+
+      <td>
+        <a class="btn btn-sm btn-info text-white"  ><i   [routerLink]="['/update/user/',user.id]" class="fa fa-pencil">edit</i></a>
+        <a class="btn btn-sm btn-danger text-white ml-1" ><i   [routerLink]="['/delete/user/',user.id]"class="fa fa-trash">delete</i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>

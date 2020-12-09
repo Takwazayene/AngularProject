@@ -1,0 +1,26 @@
+<div class="form-group text-center">
+<h1> List plat</h1>
+</div>
+  <app-listplat (prix)="calculPrix($event)"></app-listplat>
+
+<div>
+<h1> le prix total est : {{prixtot}}    </h1>
+</div>
+<!--
+<tr>
+        <td>{{plats.id}}</td>
+        <td>{{plats.resto}}</td>
+        <td>{{plats.name}}</td>
+        <td>{{plats.categorie}}</td>
+        <td>{{plats.price}}</td>
+        <td>{{plats.chef}}</td>
+        <td>{{plats.rating}}</td>
+        <td>{{plats.image}}</td>
+  
+        <td>
+          <a class="btn btn-sm btn-info text-white"  ><i   [routerLink]="['/edit/plats/',plats.id]" class="fa fa-pencil">edit</i></a>
+          <a class="btn btn-sm btn-danger text-white ml-1" ><i   [routerLink]="['/delete/plats/',plats.id]"class="fa fa-trash">delete</i></a>
+          <button (click)="calculPrix(plats.price)" ></button>
+        </td>
+      </tr>
+    -->

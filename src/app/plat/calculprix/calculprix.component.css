@@ -1,0 +1,16 @@
+h2 { 
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  
+  }
+
+  h1 {
+    color: #F272AC ;
+    text-shadow: 1px 1px grey;
+    font-weight: bold;
+}

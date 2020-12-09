@@ -1,0 +1,39 @@
+<div class="container mt-5 ">
+<button type="button" class="btn">Show all</button>
+<button routerLink="employe" type="button" class="btn m1-1">Employe</button>
+<button [routerLink]="['list']" type="button" class="btn m1-1">list</button>
+<button [routerLink]="['add/user']"  type="button" class="btn m1-1">add</button>
+
+<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+   
+  <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Resto
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <a [routerLink]="['add/resto']"class="dropdown-item"> add resto</a>
+      <a [routerLink]="['list/resto']" class="dropdown-item" >list resto</a>
+      <a [routerLink]="['add/plat']"class="dropdown-item"> add plat</a>
+      <a [routerLink]="['list/plat']" class="dropdown-item" >list plat</a>
+      <a [routerLink]="['add/category']"class="dropdown-item"> add category</a>
+      <a [routerLink]="['list/category']" class="dropdown-item" >list category</a>
+      <a [routerLink]="['prix']" class="dropdown-item" >calcul prix</a>
+
+
+    </div>
+  </div>
+
+
+  
+    <div class="btn-group" role="group">
+      <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Login
+      </button>
+      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <a routerLink="register" class="dropdown-item" href="#"> Register</a>
+        <a class="dropdown-item" href="#">Login</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  

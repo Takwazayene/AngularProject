@@ -1,0 +1,13 @@
+.center{
+   
+
+
+    display:-webkit-flex; -webkit-justify-content:center; -webkit-align-items:center;
+  display:flex; justify-content:center; align-items:center; /* pour centrer les images */
+  }
+
+
+  h1{
+    color: #EF6CD5;
+    text-shadow: 2px 2px grey;
+  }

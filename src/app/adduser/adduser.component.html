@@ -1,0 +1,39 @@
+<p>
+  adduser works!
+</p>
+
+<div *ngIf="errorMsg" > {{errorMsg}}</div>
+<form [formGroup]="form" (ngSubmit)="userservice.submit(form.value)">
+  <div class="container">
+    <div class="col-12">
+      <div class="form-group text-center">
+        <br><h5>ADD User</h5>
+      </div>
+
+
+      <div class="form-group">
+        <h3>ID:</h3>
+        <input class="form-control" formControlName="id" type="text" placeholder="id" >
+      </div>
+      <div class="form-group">
+        <h3>first_name:</h3>
+        <input class="form-control" formControlName="first_name" type="text" placeholder="First Name" >
+      </div>
+      <div class="form-group">
+        <h3>last_name:</h3>
+        <input class="form-control" formControlName="last_name" type="text" placeholder="last Name" >
+      </div>
+      <div class="form-group">
+        <h3>email:</h3>
+        <input class="form-control" formControlName="email" type="text" placeholder="Email" >
+      </div>
+
+
+      <div class="form-group">
+        <input type="submit" class="btn-primary" value="save">
+      </div>
+    </div>
+  </div>
+
+</form>
+

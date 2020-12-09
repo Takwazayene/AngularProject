@@ -1,0 +1,16 @@
+h1 {
+    color: #F272AC ;
+    text-shadow: 1px 1px grey;
+    font-weight: bold;
+}
+
+
+
+.btn {
+    background-color: #F272AC;
+    box-shadow: 4px 4px 4px grey;
+    border-radius: 8px;
+}
+
+.btn:hover {background-color: #e04189}
+

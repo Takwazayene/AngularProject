@@ -1,0 +1,50 @@
+
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="container">
+    <div class="col-12">
+      <div class="form-group text-center">
+        <br><h1>edit user</h1>
+      </div>
+
+
+      <div class="form-group">
+        <h3>id:</h3>
+        <input class="form-control" formControlName="id" type="text" placeholder="id" readonly >
+
+      </div>
+      <div class="form-group">
+        <h3>name:</h3>
+        <input class="form-control" formControlName="name" type="text" placeholder="name" >
+        <mat-error *ngIf="f.name.errors?.required && f.name.touched">name is required</mat-error>
+
+      </div>
+      <div class="form-group">
+        <h3>username:</h3>
+        <input class="form-control" formControlName="username" type="text" placeholder="username" >
+        <mat-error *ngIf="f.username.errors?.required && f.username.touched">username is required</mat-error>
+
+      </div>
+      <div class="form-group">
+        <h3>email:</h3>
+        <input class="form-control" formControlName="email" type="text" placeholder="email" >
+        <mat-error *ngIf="f.email.errors?.required && f.email.touched">email is required</mat-error>
+        <mat-error *ngIf="f.email.errors?.pattern && f.email.touched">Please provide a valid email address</mat-error>
+      </div>
+      <div class="form-group">
+        <h3>password:</h3>
+        <input class="form-control"  formControlName="password" type="text" placeholder="password" >
+        <mat-error *ngIf="f.password.errors?.required && f.password.touched">Password is required</mat-error>
+        <mat-error *ngIf="f.password.errors?.minlength && f.password.touched">Password must
+          be at least 3 characters long</mat-error>
+      </div>
+
+
+      <div class="form-group">
+        <button [disabled]="form.invalid"  class="btn btn-secondary btn-lg btn-block" type="submit">save </button>
+      </div>
+    </div>
+  </div>
+
+</form>
+

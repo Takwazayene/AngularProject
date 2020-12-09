@@ -1,0 +1,73 @@
+
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="container">
+      <div class="col-12">
+        <div class="form-group text-center">
+          <br><h1>edit plat</h1>
+        </div>
+  
+  
+        <div class="form-group">
+          <h3>id:</h3>
+          <input class="form-control" formControlName="id" type="text" placeholder="id" readonly >
+  
+        </div>
+        <div class="form-group">
+          <h3>name resto:</h3>
+          <input class="form-control" formControlName="resto" type="text" placeholder="resto">
+          <mat-error *ngIf="f.resto.errors?.required && f.resto.touched">name resto is required</mat-error>
+  
+        </div>
+        <div class="form-group">
+          <h3>name plat:</h3>
+          <input class="form-control" formControlName="name" type="text" placeholder="name" >
+              <mat-error *ngIf="f.name.errors?.required && f.name.touched">name plat is required</mat-error>
+  
+        </div>
+  
+        <div class="form-group">
+          <h3>categorie:</h3>
+          <input class="form-control" formControlName="categorie" type="text" placeholder="categorie" >
+          <mat-error *ngIf="f.categorie.errors?.required && f.categorie.touched">categorie is required</mat-error>   
+        </div>
+  
+  
+        <div class="form-group">
+          <h3>price:</h3>
+          <input class="form-control" formControlName="price" type="number" placeholder="price" >
+          <mat-error *ngIf="f.price.errors?.required && f.price.touched">price is required</mat-error>
+        </div>
+  
+        <div class="form-group">
+          <h3>chef:</h3>
+          <input class="form-control" formControlName="chef" type="text" placeholder="chef" >
+          <mat-error *ngIf="f.chef.errors?.required && f.chef.touched">chef is required</mat-error>
+        </div>
+  
+  
+        <div class="form-group">
+          <h3>rating:</h3>
+          <input class="form-control" formControlName="rating" type="number" placeholder="rating" >
+          <mat-error *ngIf="f.rating.errors?.required && f.rating.touched">rating is required</mat-error>
+        </div>
+  
+      
+  
+  
+        <div class="form-group">
+          <h3>image:</h3>
+          <input class="form-control" formControlName="image" type="text" placeholder="image" >
+          <mat-error *ngIf="f.image.errors?.required && f.image.touched">image is required</mat-error>
+        </div>
+  
+  
+        <div class="form-group">
+          <button [disabled]="form.invalid"  class="btn btn-secondary btn-lg btn-block" type="submit">save </button>
+        </div>
+      </div>
+    </div>
+  
+  </form>
+  
+  
