@@ -11,7 +11,7 @@
         <input class="form-control" type="text" name="id" ngModel #id="ngModel" required placeholder="id" >
         <mat-error *ngIf="id.errors?.required && id.dirty">id is required</mat-error>
         <div>
-        <mat-error [hidden]="id.value > 0 && id.dirty">id must be positive </mat-error>
+        <mat-error *ngIf="0 > id.value && id.dirty">id must be positive </mat-error>
       </div>
 
     </div>
@@ -23,15 +23,19 @@
     </div>
     <div>
       <h3>email :</h3>
-      <input class="form-control" type="text"   name="email" ngModel #email="ngModel" required placeholder="email" >
+      <input class="form-control" type="text"   name="email" ngModel #email="ngModel" required  placeholder="email" >
           <mat-error *ngIf="email.errors?.required && email.dirty">email is required</mat-error>
+         
 
     </div>
 
     <div>
       <h3>mobile:</h3>
-      <input class="form-control"  type="text"  name="mobile" ngModel #mobile="ngModel" required placeholder="mobile" >
+      <input class="form-control"  type="text"  name="mobile" ngModel #mobile="ngModel" required minlength="8"  maxlength="8" placeholder="mobile" >
       <mat-error *ngIf="mobile.errors?.required && mobile.dirty">mobile is required</mat-error>   
+      <mat-error *ngIf="mobile.errors?.minlength && mobile.dirty">mobile must be 8 characters</mat-error> 
+      <mat-error *ngIf="mobile.errors?.maxlength && mobile.dirty">mobile must be 8 characters</mat-error>   
+
     </div>
 
 

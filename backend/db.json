@@ -8,41 +8,6 @@
       "email": "manel@gmail.com"
     },
     {
-      "id": "89l7OUM",
-      "name": "",
-      "username": "",
-      "email": "hh",
-      "password": "123"
-    },
-    {
-      "id": "x_wlCej",
-      "name": "",
-      "username": "",
-      "email": "manel@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "0D-X1QD",
-      "name": "",
-      "username": "",
-      "email": "manel@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "c4XbIGP",
-      "name": "",
-      "username": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "N9H9-xm",
-      "name": "",
-      "username": "",
-      "email": "",
-      "password": ""
-    },
-    {
       "id": "h",
       "name": "h",
       "username": "hh",
@@ -55,20 +20,6 @@
       "username": "h",
       "email": "h",
       "password": "h"
-    },
-    {
-      "id": "GRtoBGW",
-      "name": "",
-      "username": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "Gn3L1q3",
-      "name": "",
-      "username": "",
-      "email": "",
-      "password": ""
     },
     {
       "id": "22",
@@ -268,6 +219,27 @@
       "email": "ahmed@gmail.com",
       "mobile": "25252525",
       "position": "chefahmed"
+    },
+    {
+      "id": "21",
+      "name": "mouhamed",
+      "email": "mouhamed@gmail.com",
+      "mobile": "25595696",
+      "position": "chef"
+    },
+    {
+      "id": "22",
+      "name": "mounir",
+      "email": "mounir@gmail.com",
+      "mobile": "12987452",
+      "position": "chef"
+    },
+    {
+      "id": "23",
+      "name": "omar",
+      "email": "omar@gmail.com",
+      "mobile": "90526485",
+      "position": "serveur"
     }
   ]
 }

@@ -11,18 +11,25 @@
         <h3>id:</h3>
         <input class="form-control" formControlName="id" type="text" placeholder="id" >
         <mat-error *ngIf="f.id.errors?.required && f.id.touched">id is required</mat-error>
+<div>
+  <mat-error *ngIf="f.id.errors?.pattern && f.id.touched">id must be positive</mat-error>
 
+</div>
       </div>
       <div class="form-group">
-        <h3>employeId:</h3>
+        <h3>employe Id:</h3>
         <input class="form-control" formControlName="employeId" type="text" placeholder="employeId">
-        <mat-error *ngIf="f.employeId.errors?.required && f.employeId.touched">employeId is required</mat-error>
+        <mat-error *ngIf="f.employeId.errors?.required && f.employeId.touched">employe Id is required</mat-error>
+        <div>
+          <mat-error *ngIf="f.employeId.errors?.pattern && f.employeId.touched">employe Id must be positive</mat-error>
+
+        </div>
 
       </div>
       <div class="form-group">
-        <h3>nomResto:</h3>
+        <h3>name resto:</h3>
         <input class="form-control" formControlName="nomResto" type="text" placeholder="nomResto" >
-            <mat-error *ngIf="f.nomResto.errors?.required && f.nomResto.touched">nomResto is required</mat-error>
+            <mat-error *ngIf="f.nomResto.errors?.required && f.nomResto.touched">name resto is required</mat-error>
 
       </div>
 
@@ -34,15 +41,23 @@
 
 
       <div class="form-group">
-        <h3>nbreEmploye:</h3>
+        <h3>number of employees:</h3>
         <input class="form-control" formControlName="nbreEmploye" type="number" placeholder="nbreEmploye" >
-        <mat-error *ngIf="f.nbreEmploye.errors?.required && f.nbreEmploye.touched">nbreEmploye is required</mat-error>
+        <mat-error *ngIf="f.nbreEmploye.errors?.required && f.nbreEmploye.touched">number of employees is required</mat-error>
+        <div>
+          <mat-error *ngIf="f.nbreEmploye.errors?.pattern && f.nbreEmploye.touched">number of employees must be positive</mat-error>
+
+        </div>
       </div>
 
       <div class="form-group">
         <h3>promotion:</h3>
         <input class="form-control" formControlName="promotion" type="number" placeholder="promotion" >
         <mat-error *ngIf="f.promotion.errors?.required && f.promotion.touched">promotion is required</mat-error>
+        <div>
+          <mat-error *ngIf="f.promotion.errors?.min && f.promotion.errors?.max && f.promotion.touched">promotion must be from 0 to 100</mat-error>
+
+        </div>
       </div>
 
 
@@ -50,12 +65,21 @@
         <h3>rating:</h3>
         <input class="form-control" formControlName="rating" type="number" placeholder="rating" >
         <mat-error *ngIf="f.rating.errors?.required && f.rating.touched">rating is required</mat-error>
+        <div>
+          <mat-error *ngIf="f.rating.errors?.pattern && f.rating.touched">rating must be from 0 to 5</mat-error>
+
+        </div>
+
       </div>
 
       <div class="form-group">
         <h3>etat:</h3>
         <input class="form-control" formControlName="etat" type="number" placeholder="etat" >
         <mat-error *ngIf="f.etat.errors?.required && f.etat.touched">etat is required</mat-error>
+        <div>
+          <mat-error *ngIf="f.etat.errors?.pattern && f.etat.touched">etat 1 or 0</mat-error>
+
+        </div>
       </div>
 
 

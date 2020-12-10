@@ -20,15 +20,15 @@ export class AddplatComponent implements OnInit {
 
 
     form = this.fb.group({
-    id: ['', [Validators.required]],
+    id: ['', [Validators.required,Validators.pattern('^(0|[1-9][0-9]*)$')]],
     resto: ['',[Validators.required]],
     name: ['', Validators.required],
 
     categorie: ['', [Validators.required]],
-    price: ['',[Validators.required]],
+    price: ['',[Validators.required,Validators.pattern('^(0|[1-9][0-9]*)$')]],
     chef: ['', Validators.required],
 
-    rating: ['', [Validators.required]],
+    rating: ['', [Validators.required,Validators.pattern('[0-5]')]],
     image: ['', Validators.required],
       
     });

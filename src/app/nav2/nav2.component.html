@@ -1,9 +1,5 @@
 <div class="container mt-5 ">
-<button type="button" class="btn">Show all</button>
-<button routerLink="employe" type="button" class="btn m1-1">Employe</button>
-<button [routerLink]="['list']" type="button" class="btn m1-1">list</button>
-<button [routerLink]="['add/user']"  type="button" class="btn m1-1">add</button>
-
+<button [routerLink]="['list']" type="button" class="btn m1-1">user</button>
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
    
   <div class="btn-group" role="group">
@@ -29,7 +25,9 @@
       Employe
     </button>
     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <a [routerLink]="['list/employe']"class="dropdown-item"> list employe</a>
       <a [routerLink]="['add/employe']"class="dropdown-item"> add employe</a>
+      
       
 
     </div>
@@ -43,7 +41,7 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
         <a routerLink="register" class="dropdown-item" href="#"> Register</a>
-        <a class="dropdown-item" href="#">Login</a>
+       
       </div>
     </div>
   </div>

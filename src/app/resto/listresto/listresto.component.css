@@ -8,3 +8,10 @@
     
     background-color: #F272AC;
 }
+
+
+h1 {
+    color: #F272AC ;
+    text-shadow: 1px 1px grey;
+    font-weight: bold;
+}

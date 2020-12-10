@@ -1,0 +1,12 @@
+<td>{{categoryy.id}}</td>
+        <td>{{categoryy.name}}</td>
+        <td>{{categoryy.quantity}}</td>
+        <td>{{categoryy.nbplat}}</td>
+       <td [ngClass] ="'style1'" > {{like1}}</td>
+        <td>
+          <a class="btn btn-sm btn-info text-white"  ><i   [routerLink]="['/edit/plat/',categoryy.id]" class="fa fa-pencil">edit</i></a>
+          <a class="btn btn-sm btn-danger text-white ml-1" ><i   [routerLink]="['/delete/plat/',categoryy.id]"class="fa fa-trash">delete</i></a>
+          <a [ngClass] ="'style1'" class="btn btn-sm btn-info text-white ml-1" ><i (click)= "addLike()"  class="fa addLike">like</i></a>
+
+          
+ </td>

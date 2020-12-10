@@ -1,4 +1,6 @@
-
+<div class="form-group text-center">
+  <br><h1> List category </h1>
+</div>
 <table class="table table-borderless">
     <thead class="thead-light">
       <th>Id</th>
@@ -6,30 +8,16 @@
       <th>quantity</th>
       <th>nbplat</th>
       <th>like</th>
-      <th>like</th>
      
   
       <th>
-       
-  
         <a class="btn btn-sm btn-success text-white"[routerLink]="['/add/plat/']"><i class="fa fa-plus"></i> Add Item</a>
       </th>
     </thead>
     <tbody>
       
       <tr *ngFor="let categoryy of category" >
-        <td>{{categoryy.id}}</td>
-        <td>{{categoryy.name}}</td>
-        <td>{{categoryy.quantity}}</td>
-        <td>{{categoryy.nbplat}}</td>
-        <td>{{categoryy.like}}</td>
-        <td>{{like}}</td>
-       
-        <td>
-          <a class="btn btn-sm btn-info text-white"  ><i   [routerLink]="['/edit/plat/',categoryy.id]" class="fa fa-pencil">edit</i></a>
-          <a class="btn btn-sm btn-danger text-white ml-1" ><i   [routerLink]="['/delete/plat/',categoryy.id]"class="fa fa-trash">delete</i></a>
-          
-        </td>
+        <app-category [categoryy]="categoryy"></app-category>
       </tr>
     </tbody>
   </table>

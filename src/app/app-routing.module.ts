@@ -1,5 +1,5 @@
 import {RouterModule, Routes} from '@angular/router';
-import {UsersComponent} from './users/users.component';
+//import {UsersComponent} from './users/users.component';
 import {EdituserComponent} from './edituser/edituser.component';
 import {DeleteuserComponent} from "./deleteuser/deleteuser.component";
 import { UpdateComponent } from './update/update.component';
@@ -17,13 +17,14 @@ import { EditplatComponent } from './plat/editplat/editplat.component';
 import { AddplatComponent } from './plat/addplat/addplat.component';
 import { ListcategoryComponent } from './category/listcategory/listcategory.component';
 import { CalculprixComponent } from './plat/calculprix/calculprix.component';
+import { ListemployeComponent } from './listemploye/listemploye.component';
 
 const APP_ROUTING: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'list' },
   //{path: '**', redirectTo: 'list'},
   {path: 'add/employe', component: EmployeComponent},
   {path: 'update/user/:id', component: UpdateComponent},
-  {path: 'user', component: UsersComponent},
+  //{path: 'user', component: UsersComponent},
   {path: 'user/:id', component: EdituserComponent},
   {path: 'delete/user/:id', component: DeleteuserComponent},
   {path: 'add/user', component: AdduserComponent},
@@ -39,6 +40,7 @@ const APP_ROUTING: Routes = [
   {path: 'add/plat', component: AddplatComponent},
   {path: 'list/category', component: ListcategoryComponent},
   {path: 'prix', component: CalculprixComponent},
+  {path: 'list/employe', component: ListemployeComponent},
 
 
   

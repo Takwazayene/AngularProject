@@ -1,0 +1,39 @@
+<div class="form-group text-center">
+  <br><h1> List category </h1>
+</div>
+<table class="table table-borderless">
+    <thead class="thead-light">
+      <th>Id</th>
+      <th>name</th>
+      <th>email</th>
+      <th>mobile</th>
+      <th>position</th>
+    
+  
+      <th>
+       
+  
+        <a class="btn btn-sm btn-success text-white"[routerLink]="['/add/employe/']"><i class="fa fa-plus"></i> Add Item</a>
+      </th>
+    </thead>
+    <tbody>
+     
+    
+  
+      <tr *ngFor="let emp of employe " >
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.mobile}}</td>
+        <td>{{emp.position}}</td>
+    
+      </tr>
+  
+     
+    </tbody>
+  </table>
+
+
+
+
+

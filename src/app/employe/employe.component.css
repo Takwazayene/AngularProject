@@ -7,3 +7,9 @@ h2{
     background-color: #F272AC !important;
     box-shadow :4px 4px 4px grey;
 }
+
+h1 {
+    color: #F272AC ;
+    text-shadow: 1px 1px grey;
+    font-weight: bold;
+}

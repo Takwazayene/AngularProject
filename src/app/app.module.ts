@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { UsersComponent } from './users/users.component';
+//import { UsersComponent } from './users/users.component';
 import { EdituserComponent } from './edituser/edituser.component';
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 import {RouterModule} from '@angular/router';
@@ -40,11 +40,13 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgxPaginationModule} from 'ngx-pagination';
 import { pdfMake } from 'pdfmake/build/pdfmake';
 import { pdfFonts} from 'pdfmake/build/vfs_fonts';
+import { ListemployeComponent } from './listemploye/listemploye.component';
+import { CategoryComponent } from './category/category/category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
+    //UsersComponent,
     EdituserComponent,
     DeleteuserComponent,
     UpdateComponent,
@@ -65,6 +67,8 @@ import { pdfFonts} from 'pdfmake/build/vfs_fonts';
     AddplatComponent,
     ListcategoryComponent,
     CalculprixComponent,
+    ListemployeComponent,
+    CategoryComponent,
   
     
     
