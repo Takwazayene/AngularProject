@@ -1,4 +1,55 @@
-<p>
-  emloye works!
-</p>
+<form #f="ngForm" (ngSubmit)="employeservice.submit(f.value)">
+  <div class="container">
+    <div class="col-12">
+      <div class="form-group text-center">
+        <br><h1> add Employe </h1>
+      </div>
+
+
+      <div>
+        <h3>id:</h3>
+        <input class="form-control" type="text" name="id" ngModel #id="ngModel" required placeholder="id" >
+        <mat-error *ngIf="id.errors?.required && id.dirty">id is required</mat-error>
+        <div>
+        <mat-error [hidden]="id.value > 0 && id.dirty">id must be positive </mat-error>
+      </div>
+
+    </div>
+    <div>
+      <h3>name :</h3>
+      <input class="form-control" type="text" name="name" ngModel #name="ngModel"  required placeholder="name">
+      <mat-error *ngIf="name.errors?.required && name.dirty">name resto is required</mat-error>
+
+    </div>
+    <div>
+      <h3>email :</h3>
+      <input class="form-control" type="text"   name="email" ngModel #email="ngModel" required placeholder="email" >
+          <mat-error *ngIf="email.errors?.required && email.dirty">email is required</mat-error>
+
+    </div>
+
+    <div>
+      <h3>mobile:</h3>
+      <input class="form-control"  type="text"  name="mobile" ngModel #mobile="ngModel" required placeholder="mobile" >
+      <mat-error *ngIf="mobile.errors?.required && mobile.dirty">mobile is required</mat-error>   
+    </div>
+
+
+    <div >
+      <h3>position:</h3>
+      <input class="form-control"  type="text"  name="position" ngModel #position="ngModel"  required placeholder="position" >
+      <mat-error *ngIf="position.errors?.required && position.dirty">position is required</mat-error>
+    </div>
+
+   
+
+
+
+      <div >
+        <input type="submit" [disabled]="f.invalid" class="btn btn-secondary btn-lg btn-block" value="add">
+      </div>
+    </div>
+  </div>
+
+</form>
 

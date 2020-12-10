@@ -34,8 +34,11 @@
         <td>{{plats.price}}</td>
         <td>{{plats.chef}}</td>
         <td>{{plats.rating}}</td>
-        <td>{{plats.image}}</td>
-  
+
+        <td><a href="#"><img class="card-img-top img-responsive"
+          src = "assets/img/plat/{{plats.id}}.jfif" 
+          style = "height :200px;width:fil-content"
+         alt=""></a></td>
         <td>
           <a class="btn btn-sm btn-info text-white"  ><i   [routerLink]="['/edit/plat/',plats.id]" class="fa fa-pencil">edit</i></a>
           <a class="btn btn-sm btn-danger text-white ml-1" ><i   [routerLink]="['/delete/plat/',plats.id]"class="fa fa-trash">delete</i></a>

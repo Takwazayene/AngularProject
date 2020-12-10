@@ -185,6 +185,36 @@
       "chef": "chef1",
       "rating": 1,
       "image": "image1"
+    },
+    {
+      "id": "80",
+      "resto": "resto80",
+      "name": "plat880",
+      "categorie": "cat80",
+      "price": 80,
+      "chef": "chef80",
+      "rating": 5,
+      "image": "C:\\fakepath\\test13.jpg"
+    },
+    {
+      "id": "5",
+      "resto": "6",
+      "name": "55",
+      "categorie": "666",
+      "price": 55,
+      "chef": "66",
+      "rating": 5,
+      "image": "C:\\fakepath\\test20.jpg"
+    },
+    {
+      "id": "8",
+      "resto": "resto5",
+      "name": "plat5",
+      "categorie": "cat5",
+      "price": 8,
+      "chef": "chef5",
+      "rating": 4,
+      "image": "C:\\fakepath\\8.jfif"
     }
   ],
   "category": [
@@ -215,6 +245,29 @@
       "quantity": 5,
       "nbplat": 7,
       "like": 1
+    }
+  ],
+  "employe": [
+    {
+      "id": "1",
+      "name": "emp1",
+      "email": "emp1@gmail.com",
+      "mobile": 95322200,
+      "position": "chef"
+    },
+    {
+      "id": "2",
+      "name": "emp2",
+      "email": "emp2@gmail.com",
+      "mobile": 25489651,
+      "position": "chef"
+    },
+    {
+      "id": "3",
+      "name": "ahmed",
+      "email": "ahmed@gmail.com",
+      "mobile": "25252525",
+      "position": "chefahmed"
     }
   ]
 }

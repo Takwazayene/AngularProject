@@ -83,7 +83,8 @@ import { pdfFonts} from 'pdfmake/build/vfs_fonts';
     FormsModule,
     Ng2SearchPipeModule,
     NgxPaginationModule,
-    Ng2OrderModule
+    Ng2OrderModule,
+    
 
   ],
   providers: [],

@@ -57,11 +57,17 @@
 
     <div class="form-group">
       <h3>image:</h3>
-      <input class="form-control" formControlName="image" type="text" placeholder="image" >
+      <input class="form-control" formControlName="image" type="file" placeholder="image" accept="image/*"   (change)="onSelectFile($event)" >
+      <img [src]="imgURL" height="200" *ngIf="imgURL">
+
       <mat-error *ngIf="f.image.errors?.required && f.image.touched">image is required</mat-error>
     </div>
    
-    
+     <!-- <div class="form-group">
+      <label>File Upload  </label>
+          <input type="file" accept="image/*" (change)="onSelectFile($event)">
+          <img [src]="imgURL" height="200" *ngIf="imgURL">
+  </div> -->
       
 
       <div class="form-group">

@@ -21,7 +21,7 @@ import { CalculprixComponent } from './plat/calculprix/calculprix.component';
 const APP_ROUTING: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'list' },
   //{path: '**', redirectTo: 'list'},
-  {path: 'employe', component: EmployeComponent},
+  {path: 'add/employe', component: EmployeComponent},
   {path: 'update/user/:id', component: UpdateComponent},
   {path: 'user', component: UsersComponent},
   {path: 'user/:id', component: EdituserComponent},
