@@ -61,4 +61,11 @@ lieu:any;
 
   }
 
+
+  alertEtatResto()
+  {
+
+    alert("please block the restaurant before deleting it ==> CHANGE STATE TO 0");
+  }
+
 }

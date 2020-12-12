@@ -7,6 +7,8 @@ import {Category } from 'src/app/model/category' ;
 import { ListcategoryComponent } from 'src/app/category/listcategory/listcategory.component';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { DatePipe } from '@angular/common';
+import { formatDate } from "@angular/common";
 
 /*
 import * as pdfMake from 'pdfmake/build/pdfmake';
@@ -30,7 +32,8 @@ export class ListplatComponent implements OnInit {
  @Input() category :Category;
  @Output() liked = new EventEmitter() ;
  @Output() prix = new EventEmitter() ;
-
+ currentDate :any;
+ formattedDate:any;
   constructor(public platservice: PlatService) { 
 
   }
@@ -222,9 +225,14 @@ sort(key){
 
 
 generatePdf(p){
+  
+  const format = 'dd/MM/yyyy';
+  const myDate =  new Date();
+  const locale = 'en-US';
+ this.formattedDate = formatDate(myDate, format, locale);
 
   console.log(p);
-  const documentDefinition = { content: 'nom Offre'+ p.resto +"Diplome demander "+ p.name +" location "+p.categorie + ""};
+  const documentDefinition = { content:'date:'+ "\n"+this.formattedDate+ "\n"+ 'nom restaurant : '+ "\n" + p.resto + "\n" +"nom plat demander : "+ "\n"+ p.name + "\n"+" de categorie : "+ "\n"+p.categorie + "", };
   pdfMake.createPdf(documentDefinition).open();
   pdfMake.createPdf(documentDefinition).download();
  }

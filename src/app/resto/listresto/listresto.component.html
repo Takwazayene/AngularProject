@@ -19,7 +19,7 @@
       <th>number of employees</th>
       <th>promotion</th>
       <th>rating</th>
-      <th>etat</th>
+      <th>state</th>
       <th>image</th>
   
       <th>
@@ -45,9 +45,9 @@
   
         <td>
           <a class="btn btn-sm btn-info text-white"  ><i   [routerLink]="['/edit/resto/',restos.id]" class="fa fa-pencil">edit</i></a>
-          <a *ngIf="restos.etat==1"  [ngClass] ="'style1'"   class="btn btn-sm btn-danger text-white ml-1" ><i   [routerLink]="['/delete/resto/',restos.id]"  class="fa fa-trash">delete</i></a>
+          <a (click)="alertEtatResto()" *ngIf="restos.etat==1"  [ngClass] ="'style1'"    class="btn btn-sm btn-danger text-white ml-1" ><i     class="fa fa-trash">delete</i></a>
 
-          <a *ngIf="restos.etat!=1"class="btn btn-sm btn-danger text-white ml-1" ><i  class="fa fa-trash">delete</i></a>
+          <a *ngIf="restos.etat==0" class="btn btn-sm btn-danger text-white ml-1" ><i [routerLink]="['/delete/resto/',restos.id]" class="fa fa-trash">delete</i></a>
 
         </td>
       </tr>

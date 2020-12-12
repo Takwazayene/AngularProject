@@ -11,6 +11,11 @@
         <h3>id:</h3>
         <input class="form-control" formControlName="id" type="text" placeholder="id" >
         <mat-error *ngIf="f.id.errors?.required && f.id.touched">id is required</mat-error>
+        <div>
+          <mat-error *ngIf="f.id.errors?.pattern && f.id.touched">id must be positive</mat-error>
+
+
+        </div>
 
     </div>
     <div class="form-group">
@@ -37,6 +42,10 @@
       <h3>price:</h3>
       <input class="form-control" formControlName="price" type="number" placeholder="price" >
       <mat-error *ngIf="f.price.errors?.required && f.price.touched">price is required</mat-error>
+      <div>
+        <mat-error *ngIf="f.price.errors?.pattern && f.price.touched">price must be positive</mat-error>
+
+      </div>
     </div>
 
     <div class="form-group">
@@ -50,6 +59,10 @@
       <h3>rating:</h3>
       <input class="form-control" formControlName="rating" type="number" placeholder="rating" >
       <mat-error *ngIf="f.rating.errors?.required && f.rating.touched">rating is required</mat-error>
+      <div>
+        <mat-error *ngIf="f.rating.errors?.pattern&& f.rating.touched">rating  must be from 0 to 5</mat-error>
+
+      </div>
     </div>
 
   

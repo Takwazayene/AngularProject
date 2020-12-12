@@ -22,6 +22,7 @@ export class AddplatComponent implements OnInit {
     form = this.fb.group({
     id: ['', [Validators.required,Validators.pattern('^(0|[1-9][0-9]*)$')]],
     resto: ['',[Validators.required]],
+    
     name: ['', Validators.required],
 
     categorie: ['', [Validators.required]],
