@@ -232,7 +232,49 @@ generatePdf(p){
  this.formattedDate = formatDate(myDate, format, locale);
 
   console.log(p);
-  const documentDefinition = { content:'date:'+ "\n"+this.formattedDate+ "\n"+ 'nom restaurant : '+ "\n" + p.resto + "\n" +"nom plat demander : "+ "\n"+ p.name + "\n"+" de categorie : "+ "\n"+p.categorie + "", };
+ /* const documentDefinition = { header: 'date:'+ "\n"+this.formattedDate, content:[{text:'nom restaurant : '+ "\n" + p.resto + "\n" +"nom plat demander : "+ "\n"+ p.name + "\n"+" de categorie : "+ "\n"+p.categorie + "",fontSize:16,alignemnt:'center',color: '#047886',style: 'sectionHeader'} ],styles: {  
+    sectionHeader: {  
+        bold: true,  
+        decoration: 'underline',  
+        fontSize: 14,  
+        margin: [0, 15, 0, 15]  ,
+        color : '#047886' ,
+        
+    }  
+} 
+
+  };*/
+
+
+  const documentDefinition = { header: 'date:'+ "\n"+this.formattedDate,   content:[
+    {  text : 'Order Details'
+  }, 
+  {
+    table: {  
+      headerRows: 1,  
+      widths: ['*', 'auto', 'auto', 'auto'],  
+      body: [  
+          ['Resto', 'Name plat', 'Name Category'],
+          [  p.resto ,  p.name , p.categorie]  
+
+
+      ]
+
+
+  }
+}
+],
+  
+
+
+
+    };
+
+
+
+
+
+
   pdfMake.createPdf(documentDefinition).open();
   pdfMake.createPdf(documentDefinition).download();
  }
