@@ -10,19 +10,23 @@
       <div class="form-group">
         <h3>ID:</h3>
         <input class="form-control" formControlName="id" type="text" placeholder="id" >
-        <mat-error *ngIf="f.id.errors?.required && f.id.touched">Id is required</mat-error>
+        <mat-error *ngIf="f.id.errors?.required && f.id.dirty">Id is required</mat-error>
+        <div>
+          <mat-error *ngIf="f.id.errors?.pattern && f.id.dirty">Id must be positive</mat-error>
+        </div>
+        
 
       </div>
       <div class="form-group">
         <h3>name:</h3>
         <input class="form-control" formControlName="name" type="text" placeholder="name">
-        <mat-error *ngIf="f.name.errors?.required && f.name.touched">name is required</mat-error>
+        <mat-error *ngIf="f.name.errors?.required && f.name.dirty">name is required</mat-error>
 
       </div>
       <div class="form-group">
         <h3>username:</h3>
         <input class="form-control" formControlName="username" type="text" placeholder="username" >
-            <mat-error *ngIf="f.username.errors?.required && f.username.touched">username is required</mat-error>
+            <mat-error *ngIf="f.username.errors?.required && f.username.dirty">username is required</mat-error>
 
       </div>
       <div class="form-group">
@@ -32,8 +36,8 @@
 
         <input class="form-control" formControlName="email" type="text" placeholder="email" >
   
-        <mat-error *ngIf="f.email.errors?.required && f.email.touched">email is required</mat-error>
-        <mat-error *ngIf="f.email.errors?.pattern && f.email.touched">Please provide a valid email address
+        <mat-error *ngIf="f.email.errors?.required && f.email.dirty">email is required</mat-error>
+        <mat-error *ngIf="f.email.errors?.pattern && f.email.dirty">Please provide a valid email address
 
         </mat-error>
 
@@ -48,8 +52,8 @@
       <div class="form-group">
         <h3>password:</h3>
         <input class="form-control" formControlName="password" type="password" placeholder="password" >
-        <mat-error *ngIf="f.password.errors?.required && f.password.touched">Password is required</mat-error>
-        <mat-error *ngIf="f.password.errors?.minlength && f.password.touched">Password must
+        <mat-error *ngIf="f.password.errors?.required && f.password.dirty">Password is required</mat-error>
+        <mat-error *ngIf="f.password.errors?.minlength && f.password.dirty">Password must
           be at least 3 characters long</mat-error>
 
 

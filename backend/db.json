@@ -1,46 +1,35 @@
 {
   "users": [
     {
-      "id": "10",
-      "name": "mannou",
-      "username": "mannou55",
-      "password": "123333",
-      "email": "manel@gmail.com"
-    },
-    {
-      "id": "h",
-      "name": "h",
-      "username": "hh",
-      "email": "hh",
-      "password": "1"
-    },
-    {
-      "id": "12",
-      "name": "h",
-      "username": "h",
-      "email": "h",
-      "password": "h"
-    },
-    {
       "id": "22",
       "name": "takwa",
       "username": "takwa99",
       "password": "takwa",
       "email": "takwa@gmail.com"
+    },
+    {
+      "id": "66",
+      "name": "user66",
+      "username": "user66",
+      "password": "1234",
+      "email": "user66@gmail.com"
+    },
+    {
+      "id": "90",
+      "name": "user90",
+      "username": "user90",
+      "password": "12345",
+      "email": "user90@gmail.com"
+    },
+    {
+      "id": "6",
+      "name": "user6",
+      "username": "user6",
+      "password": "1234",
+      "email": "user6@gmail.com"
     }
   ],
   "resto": [
-    {
-      "id": "3",
-      "employeId": "2",
-      "nomResto": "resto3",
-      "lieu": "ariana",
-      "nbreEmploye": 5,
-      "promotion": 5,
-      "rating": 2,
-      "etat": 0,
-      "image": "image2"
-    },
     {
       "id": "4",
       "employeId": "2",
@@ -76,14 +65,14 @@
     },
     {
       "id": "7",
-      "employeId": "2",
-      "nomResto": "resto7",
-      "lieu": "moknine",
-      "nbreEmploye": 5,
-      "promotion": 5,
-      "rating": 2,
+      "employeId": "6",
+      "nomResto": "resto6",
+      "lieu": "manzah",
+      "nbreEmploye": 16,
+      "promotion": 60,
+      "rating": 4,
       "etat": 1,
-      "image": "image7"
+      "image": "image6"
     }
   ],
   "plat": [
@@ -93,59 +82,29 @@
       "name": "tacos scalope",
       "categorie": "tacos",
       "price": 5,
-      "chef": "chef1",
+      "chef": "chef2",
       "rating": 1,
       "image": "image1"
     },
     {
-      "id": "3",
+      "id": "2",
       "resto": "resto333",
       "name": "plat3",
       "categorie": "cat1",
       "price": 4,
-      "chef": "chef1",
+      "chef": "chef2",
       "rating": 5,
-      "image": "image3"
+      "image": "image2"
     },
     {
-      "id": "55",
-      "resto": "resto20",
-      "name": "tacos scalope",
-      "categorie": "tacos",
-      "price": 5,
-      "chef": "chef1",
-      "rating": 1,
-      "image": "image1"
-    },
-    {
-      "id": "6",
-      "resto": "resto52",
-      "name": "plat3",
-      "categorie": "cat1",
-      "price": 4,
-      "chef": "chef1",
-      "rating": 5,
-      "image": "image3"
-    },
-    {
-      "id": "7",
+      "id": "4",
       "resto": "resto44",
       "name": "tacos scalope",
       "categorie": "tacos",
       "price": 5,
       "chef": "chef1",
       "rating": 1,
-      "image": "image1"
-    },
-    {
-      "id": "80",
-      "resto": "resto80",
-      "name": "plat880",
-      "categorie": "cat80",
-      "price": 80,
-      "chef": "chef80",
-      "rating": 5,
-      "image": "C:\\fakepath\\test13.jpg"
+      "image": "image4"
     },
     {
       "id": "5",
@@ -155,17 +114,17 @@
       "price": 55,
       "chef": "66",
       "rating": 5,
-      "image": "C:\\fakepath\\test20.jpg"
+      "image": "image5"
     },
     {
-      "id": "8",
-      "resto": "resto5",
-      "name": "plat5",
-      "categorie": "cat5",
-      "price": 8,
-      "chef": "chef5",
-      "rating": 4,
-      "image": "C:\\fakepath\\8.jfif"
+      "id": "6",
+      "resto": "resto6",
+      "name": "plat6",
+      "categorie": "cat6",
+      "price": 9,
+      "chef": "chef6",
+      "rating": 5,
+      "image": "C:\\fakepath\\6.jfif"
     }
   ],
   "category": [
@@ -240,6 +199,13 @@
       "email": "omar@gmail.com",
       "mobile": "90526485",
       "position": "serveur"
+    },
+    {
+      "id": "6",
+      "name": "employe66",
+      "email": "employe6@gmail.com",
+      "mobile": "25146894",
+      "position": "chef"
     }
   ]
 }

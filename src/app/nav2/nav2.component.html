@@ -1,9 +1,9 @@
 <div class="container mt-5 ">
-<button [routerLink]="['list']" type="button" class="btn m1-1">user</button>
+<button [routerLink]="['list']" type="button" class="btn m1-1"[ngStyle]="{'font-weight':style}" >user</button>
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
    
   <div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"[ngStyle]="{'font-weight':style}">
       Resto
     </button>
     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -11,7 +11,6 @@
       <a [routerLink]="['list/resto']" class="dropdown-item" >list resto</a>
       <a [routerLink]="['add/plat']"class="dropdown-item"> add plat</a>
       <a [routerLink]="['list/plat']" class="dropdown-item" >list plat</a>
-      <a [routerLink]="['add/category']"class="dropdown-item"> add category</a>
       <a [routerLink]="['list/category']" class="dropdown-item" >list category</a>
       <a [routerLink]="['prix']" class="dropdown-item" >calcul prix</a>
 
@@ -21,7 +20,7 @@
 
 
   <div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [ngStyle]="{'font-weight':style}">
       Employe
     </button>
     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -36,7 +35,7 @@
 
   
     <div class="btn-group" role="group">
-      <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button id="btnGroupDrop1" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [ngStyle]="{'font-weight':style}">
         Login
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">

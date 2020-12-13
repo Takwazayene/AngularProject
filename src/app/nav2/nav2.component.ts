@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav2.component.css']
 })
 export class Nav2Component implements OnInit {
-
+  style:string = 'bold'; 
   constructor() { }
 
   ngOnInit(): void {
