@@ -245,35 +245,50 @@ generatePdf(p){
 
   };*/
 
-
-  const documentDefinition = { header: 'date:'+ "\n"+this.formattedDate,   content:[
-    {  text : 'Order Details'
-  }, 
-  {
-    table: {  
-      headerRows: 1,  
-      widths: ['*', 'auto', 'auto', 'auto'],  
-      body: [  
-          ['Resto', 'Name plat', 'Name Category'],
-          [  p.resto ,  p.name , p.categorie]  
-
-
-      ]
-
-
-  }
-}
-],
-  
-
-
-
-    };
-
-
-
-
-
+  var documentDefinition = { 
+    footer: "Restaurant CHEW & CHEER by Takwa zayene ",
+    header: 'date:'+ "\n"+this.formattedDate,
+    content: [{ text:
+      'Order Details :' ,
+      color: '#047886',
+      style: 'sectionHeader'
+    },
+      {
+        columns: [
+          {
+            // auto-sized columns have their widths based on their content
+            width: 'auto',
+            text: 'Nom restaurant : '+ "\n \n " + p.resto
+          },
+          {
+            // star-sized columns fill the remaining space
+            // if there's more than one star-column, available width is divided equally
+            width: 'auto',
+            text: "Nom plat demander : "+ "\n \n"+ p.name
+          },
+       
+          {
+            // % width
+            width: 'auto',
+            text: "Categorie : " + "\n"+p.categorie
+          },
+        ],
+        // optional space between columns
+        columnGap: 60
+      },
+     
+    ]
+    ,styles: {  
+      sectionHeader: {  
+          bold: true,  
+          decoration: 'underline',  
+          fontSize: 14,  
+          margin: [0, 15, 0, 15]  ,
+          color : '#047886' ,
+          
+      }  
+  } 
+  };
 
   pdfMake.createPdf(documentDefinition).open();
   pdfMake.createPdf(documentDefinition).download();
